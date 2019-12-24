@@ -10,7 +10,6 @@ RUN buildDeps='make gcc wget libc6-dev ca-certificates cpanminus' \
        perl \
        sqlite3 \
     && cpanm --notest Mail::Milter::Authentication \
-    && cpanm MSIMERSON/Mail-DMARC-1.20191004.tar.gz \
     && apt purge -y --auto-remove $buildDeps \
     && apt clean \
     && rm -rf /var/cache/apt/archives \
