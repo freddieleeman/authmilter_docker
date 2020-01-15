@@ -9,7 +9,7 @@ RUN buildDeps='make gcc wget libc6-dev ca-certificates cpanminus' \
        zlib1g-dev \
        perl \
        sqlite3 \
-    && cpanm --notest Mail::Milter::Authentication \
+    && cpanm --notest Mail::Milter::Authentication Net::SMTPS \
     && apt purge -y --auto-remove $buildDeps \
     && apt clean \
     && rm -rf /var/cache/apt/archives \
