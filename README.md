@@ -26,7 +26,7 @@ Replace `/path/to/data` in the command below with the location of the data folde
 ```
 docker run -d \
   -v /path/to/data:/config:rw \
-  -p 12345:12345 \
+  -p 127.0.0.1:12345:12345 \
   --name authmilter_docker \
   --restart unless-stopped \
   freddieleeman/authmilter_docker
